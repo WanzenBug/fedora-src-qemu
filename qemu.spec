@@ -1361,7 +1361,11 @@ run_configure \
 %endif
   --enable-bpf \
   --enable-cap-ng \
+%if %{have_capstone_devel}
   --enable-capstone=system \
+%else
+  --enable-capstone \
+%endif
   --enable-coroutine-pool \
   --enable-curl \
   --enable-debug-info \
@@ -1431,7 +1435,11 @@ run_configure \
   --enable-xkbcommon \
   \
   \
+%if %{have_jack}
   --audio-drv-list=pa,sdl,alsa,jack,oss \
+%else
+  --audio-drv-list=pa,sdl,alsa,oss \
+%endif
   --target-list-exclude=moxie-softmmu \
   --with-default-devices \
   --enable-auth-pam \
