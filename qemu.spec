@@ -53,10 +53,6 @@
 %global tools_only 0
 
 %global user_static 1
-%if 0%{?rhel}
-# EPEL/RHEL do not have required -static builddeps
-%global user_static 0
-%endif
 
 %global have_kvm 0
 %if 0%{?kvm_package:1}
@@ -320,7 +316,7 @@ Epoch: 2
 License: GPLv2 and BSD and MIT and CC-BY
 URL: http://www.qemu.org/
 
-Source0: http://wiki.qemu-project.org/download/%{name}-%{version}%{?rcstr}.tar.xz
+Source0: https://wiki.qemu-project.org/download/%{name}-%{version}%{?rcstr}.tar.xz
 
 Source10: qemu-guest-agent.service
 Source11: 99-qemu-guest-agent.rules
