@@ -341,7 +341,7 @@ Epoch: 2
 License: Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND FSFAP AND GPL-1.0-or-later AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-2.0-or-later with GCC-exception-2.0 exception AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only and LGPL-2.1-or-later AND MIT and public-domain and CC-BY-3.0
 URL: http://www.qemu.org/
 
-Source0: http://wiki.qemu-project.org/download/%{name}-%{version}%{?rcstr}.tar.xz
+Source0: https://wiki.qemu-project.org/download/%{name}-%{version}%{?rcstr}.tar.xz
 
 Source10: qemu-guest-agent.service
 Source11: 99-qemu-guest-agent.rules
@@ -355,8 +355,8 @@ Source31: kvm-x86.conf
 Source36: README.tests
 
 # Fix SGX assert
-Patch: 0001-target-i386-the-sgx_epc_get_section-stub-is-reachabl.patch
-Patch: 0002-hw-pci-bridge-Make-PCIe-and-CXL-PXB-Devices-inherit-.patch
+Patch0: 0001-target-i386-the-sgx_epc_get_section-stub-is-reachabl.patch
+Patch1: 0002-hw-pci-bridge-Make-PCIe-and-CXL-PXB-Devices-inherit-.patch
 
 BuildRequires: meson >= %{meson_version}
 BuildRequires: bison
